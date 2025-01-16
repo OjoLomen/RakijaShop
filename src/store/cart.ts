@@ -20,19 +20,19 @@ export const useCartStore = defineStore('cart', () => {
             id: 1,
             name: 'Rakija od Dunje',
             price: 10,
-            image: 'public/images/dunja.png', // Cesta k obrázku produktu A
+            image: 'public/images/dunja.png',
         },
         {
             id: 2,
             name: 'Rakija od Jagode',
             price: 20,
-            image: 'public/images/jagoda.png', // Cesta k obrázku produktu B
+            image: 'public/images/jagoda.png',
         },
         {
             id: 3,
             name: 'Šljivovica ubica',
             price: 30,
-            image: 'public/images/sljiva.png', // Cesta k obrázku produktu C
+            image: 'public/images/sljiva.png',
         },
     ]);
 
@@ -49,7 +49,7 @@ export const useCartStore = defineStore('cart', () => {
         }
     }
 
-    // Function to clear the cart
+    // Funkcia aby sa košík clearoval
     function clearCart() {
         cart.value = [];
     }

@@ -46,7 +46,7 @@ export default defineComponent({
   setup() {
     const router = useRouter();
 
-    // Redirect to the store page when "Shop Now" is clicked
+    // Redirect do store page ked klikneme na Shop now
     const goToStore = () => {
       router.push('/store');
     };

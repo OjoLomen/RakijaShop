@@ -14,7 +14,7 @@
       <Cart />
     </section>
 
-    <!-- Order Button (Only visible when the cart is not empty) -->
+    <!-- Order Button (Ked pridame nieco do kart) -->
     <section v-if="hasItemsInCart" class="order-button-container">
       <button @click="goToCheckoutPage" class="order-button">Proceed to Order</button>
     </section>
@@ -24,7 +24,7 @@
 <script lang="ts" setup>
 import ProductList from '@/components/ProductList.vue';
 import Cart from '@/components/Cart.vue';
-import { useCartStore } from '@/store/cart'; // Import the cart store
+import { useCartStore } from '@/store/cart';
 import { useRouter } from 'vue-router';
 import { computed } from 'vue';
 
