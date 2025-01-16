@@ -31,20 +31,20 @@ import { computed } from 'vue';
 const cartStore = useCartStore();
 const router = useRouter();
 
-// Ensure the cart store is initialized and accessible
+// Uisti nas, že ulozisko košíka je inizializovane a pristupne.
 const hasItemsInCart = computed(() => {
   return cartStore.cart && cartStore.cart.length > 0;
 });
 
-// Store cart data in localStorage before navigating to checkout
+// Store cart data v localnom storage pred navigovaniem do chekoutu
 const goToCheckoutPage = () => {
   // Store the cart contents in localStorage for use in ThankYouPage
   localStorage.setItem('cart', JSON.stringify(cartStore.cart));
 
-  // Clear the cart when proceeding to order
+  // odstrani nam cart ked stlacime order
   cartStore.clearCart();
 
-  // Navigate to the ThankYouPage
+  // Naviguje nas do thankyou page
   router.push('/thank-you');
 };
 </script>

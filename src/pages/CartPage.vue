@@ -45,11 +45,11 @@ export default defineComponent({
     const cartStore = useCartStore()
     const router = useRouter()
 
-    // Cart items and total price from store
+    // cart itemi a konstanti pre totalnu cenu
     const cartItems = cartStore.cart
     const totalPrice = cartStore.totalPrice
 
-    // Update quantity of item
+    // azurira item kvantitu
     const updateQuantity = (item: { id: number, quantity: number }) => {
       cartStore.updateQuantity(item.id, item.quantity)
     }
@@ -61,12 +61,12 @@ export default defineComponent({
 
     // Proceed to Checkout
     const checkout = () => {
-      console.log('Proceeding to checkout');  // Debugging log
+      console.log('Proceeding to checkout');
 
-      cartStore.clearCart()  // Clear the cart after checkout
-      console.log('Cart after clearing:', cartStore.cart);  // Debugging log
+      cartStore.clearCart()
+      console.log('Cart after clearing:', cartStore.cart);
 
-      router.push('/thank-you') // Redirect to ThankYouPage
+      router.push('/thank-you')
     }
 
     return {
